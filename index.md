@@ -4,6 +4,8 @@ layout: home
 nav_order: 1
 ---
 
+# About me
+
 Current *sophomore* at Purdue, and Treasurer of the b01lers CTF team.
 
 My journey in CTFs began in 2022 when I joined the [b01lers](https://b01lersc.tf/) CTF team. I have since then been learning and competing in CTFs, and have been enjoying the experience.
@@ -22,13 +24,5 @@ I also write writeups for CTF challenges that I solve. Though I started in 2022,
 1. [2023](/docs/Writeups/2023/)
 2. [2024](/docs/Writeups/2024/)
 
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+{: .note}
+You can check out more of my projects on my [GitHub](https://github.com/CygnusX-26)

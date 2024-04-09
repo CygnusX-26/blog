@@ -287,7 +287,7 @@ test  Active   5s
 {: .note }
 You can delete your challenge with `kubectl delete challenge test`
 
-At this point, you should be able to go to `https://klodd.localhost.direct/challenge/test` and see your challenge. 
+Now, you should be able to go to `https://klodd.localhost.direct/challenge/test` and see your challenge. 
 
 Congratulations! You have successfully deployed a challenge with Klodd!
 
