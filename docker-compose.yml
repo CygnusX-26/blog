@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+    blog:
+        container_name: blog
+        build:
+            dockerfile: Dockerfile
+            context: .
+        logging:
+            driver: "json-file"
+        ports:
+            - "2345:4000"
