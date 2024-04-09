@@ -2,6 +2,7 @@
 title: Klodd
 layout: default
 parent: Tutorial
+description: "A guide to deploying challenges with Klodd"
 nav_order: 1
 ---
 
@@ -13,6 +14,9 @@ nav_order: 1
 Though the service is great, the documentation for new CTF developers is less than ideal.
 
 Some CTF challenges, particularly those involving prototype pollution and remote code execution, can potentially allow competitors to interfere with each other, whether out of malice or simply by solving the challenge. In these situations, it can be difficult to deploy challenges in a way that keeps CTFs fun and competitive for everyone. Klodd solves this problem, by giving each team their own deployment that is identical to everyone else's.
+
+{: .warning}
+You are responsible for properly configuring a wildcard DNS record to point these subdomains at your cluster. Ensure that TLS is properly configured in Traefik as well.
 
 ## Authentiation
 
@@ -28,7 +32,8 @@ Install [Docker](https://www.docker.com/get-started/) and [kubectl](https://kube
 
 Your challenge docker images must be hosted on a docker registry. This can be done through [Docker Hub](https://hub.docker.com/) or by hosting your own registry with `docker run -d -p 5000:5000 --name registry registry:2.7`
 
-**Note:** The exposed port can be whatever you want, just make sure to pull from that port in the future.
+{: .note }
+The exposed port can be whatever you want, just make sure to pull from that port in the future.
 
 Build your image with `docker build -t localhost:5000/image-name:tag .`
 Then, push it to the registry with `docker push localhost:5000/image-name:tag`
@@ -42,7 +47,8 @@ To install the Traefik with Helm, run the following commands:
 2. Add the Traefik Helm repository: `helm repo add traefik https://traefik.github.io/charts`
 3. Deploy Traefik: `helm install traefik traefik/traefik`
 
-**Note:** If you wish to restart Traefik, you can run `helm uninstall traefik` to stop the service, and then `helm install traefik traefik/traefik`.
+{: .note }
+If you wish to restart Traefik, you can run `helm uninstall traefik` to stop the service, and then `helm install traefik traefik/traefik`.
 
 <!-- A domain and corresponding wildcard TLS certificate are required. Klodd will serve individual instances on subdomains of this domain. You are responsible for properly configuring a wildcard DNS record to point these subdomains at your cluster. Ensure that TLS is properly configured in Traefik as well. -->
 
@@ -60,7 +66,8 @@ kubectl apply -f https://raw.githubusercontent.com/TJCSec/klodd/master/manifests
 
 ### Starting Klodd
 
-**Note** In yaml files listed below, you only need to worry about fields with *comments*.
+{: .remember }
+In yaml files listed below, you only need to worry about fields with *comments*.
 
 Place the following in a file named `workloads.yaml`:
 
@@ -216,9 +223,8 @@ At this point, you should be able to go to `https://klodd.localhost.direct/` and
 If you haven't already, build your image with `docker build -t localhost:5000/image-name:tag .`
 Then, push it to the registry with `docker push localhost:5000/image-name:tag`.
 
-* Remember to replace the port with the one you exposed earlier if you decided not to use 5000.
-
-**Remember** In yaml files listed below, you only need to worry about fields with *comments*.
+{: .remember }
+Replace the port with the one you exposed earlier if you decided not to use 5000.
 
 Create a file named `challenge.yaml` with the following contents:
 
@@ -278,7 +284,8 @@ NAME  STATUS   AGE
 test  Active   5s
 ```
 
-**Note:** You can delete your challenge with `kubectl delete challenge test`
+{: .note }
+You can delete your challenge with `kubectl delete challenge test`
 
 At this point, you should be able to go to `https://klodd.localhost.direct/challenge/test` and see your challenge. 
 
@@ -294,7 +301,8 @@ If you click the run button and your challenge stays in the "starting" state, th
 
 You can also check `traefik/whoami:latest` as a test image to see if it is a problem with the image. 
 
-**Note** This is on port 80.
+{: .note }
+This is on port 80.
 
 ### Unknown as the challenge status
 

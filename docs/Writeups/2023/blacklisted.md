@@ -7,9 +7,11 @@ grand_parent: Writeups
 ---
 
 # Blacklisted
-Author: me
+13 solves - 389 points - author writeup
 
----
+## Challenge Description
+`You can run anything on this!`
+
 ## Final Solution:
 
 ```python

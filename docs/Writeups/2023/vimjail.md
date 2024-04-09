@@ -7,7 +7,10 @@ grand_parent: Writeups
 ---
 
 # Vimjail 1, 1.5
- --- 
+misc | medium | 248 points
+
+## Challenge Description
+`Connect with socat file:$(tty),raw,echo=0 tcp:vimjail1.chal.uiuc.tf:1337.`
 
 vim is run with the following options: 
 `vim -R -M -Z -u /home/user/vimrc`
