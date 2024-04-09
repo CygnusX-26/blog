@@ -1,27 +1,26 @@
 ---
 title: Home
 layout: home
+nav_order: 1
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+Current *sophomore* at Purdue, and Treasurer of the b01lers CTF team.
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+My journey in CTFs began in 2022 when I joined the [b01lers](https://b01lersc.tf/) CTF team. I have since then been learning and competing in CTFs, and have been enjoying the experience.
 
-More specifically, the created site:
+This site contains my tutorials and writeups over the years. I hope you find them useful!
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+## [Tutorials](/docs/Tutorials/)
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+Sometimes I write tutorials on various topics, so that people don't have to go throug the same trouble of learning something without good `documentation`.
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
 
-To get started with creating a site, simply:
+## [Writeups](/docs/Writeups/)
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
+I also write writeups for CTF challenges that I solve. Though I started in 2022, I don't always create writeups for all the challenges I solve. But I try to write them for the ones that I find interesting or challenging.
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
+1. [2023](/docs/Writeups/2023/)
+2. [2024](/docs/Writeups/2024/)
 
 ----
 
