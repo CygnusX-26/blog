@@ -26,7 +26,7 @@ Just a side note, Klodd Auth can be configured through rCTF. View more informati
 
 ## Installation
 
-Install [Docker](https://www.docker.com/get-started/) and [kubectl](https://kubernetes.io/docs/tasks/tools/)
+Install [Docker](https://www.docker.com/get-started/), [k3s](https://docs.k3s.io/quick-start) and [kubectl](https://kubernetes.io/docs/tasks/tools/)
 
 ### Docker Registry
 
@@ -49,6 +49,9 @@ To install the Traefik with Helm, run the following commands:
 
 {: .note }
 If you wish to restart Traefik, you can run `helm uninstall traefik` to stop the service, and then `helm install traefik traefik/traefik`.
+
+{: .note }
+If you wish to run Traefik with custom values you can use `helm install traefik traefik/traefik -f values.yaml`.
 
 <!-- A domain and corresponding wildcard TLS certificate are required. Klodd will serve individual instances on subdomains of this domain. You are responsible for properly configuring a wildcard DNS record to point these subdomains at your cluster. Ensure that TLS is properly configured in Traefik as well. -->
 
@@ -182,7 +185,7 @@ traefik:
 ingress: 
   namespaceSelector:
     matchLabels:
-      kubernetes.io/metadata.name: traefik
+      kubernetes.io/metadata.name: default #ensure this matches the namespace traefik is on.
   podSelector:
     matchLabels:
       app.kubernetes.io/name: traefik
