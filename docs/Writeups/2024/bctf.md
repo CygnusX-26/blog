@@ -88,7 +88,7 @@ The final exploit is as follows.
 6. Call `eval` function with `input` result as an argument
 7. Execute arbitrary python like `__import__('os').system('sh')`
 
-My code can be found in the challenge repository, but `Crazyman` from `no rev/pwn no life` has a clean with a similar strategy, using `BUILD_TUPLE` instead of `BUILD_MAP`.
+My code can be found in the challenge repository, but `Crazyman` and `woodwhale` from `no rev/pwn no life` has cleaner bytecode with a similar strategy, using `BUILD_TUPLE` instead of `BUILD_MAP`.
 ```python
 import dis
 
