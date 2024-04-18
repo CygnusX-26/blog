@@ -106,7 +106,7 @@ metadata:
   namespace: klodd
 type: Opaque
 data: # This is customizable. Base64 decode it or view the sample config.yaml below
-  config.yaml: Y2hhbGxlbmdlRG9tYWluOiBsb2NhbGhvc3QuZGlyZWN0Cmt1YmVDb25maWc6IGNsdXN0ZXIKcHVibGljVXJsOiBodHRwczovL2tsb2RkLmxvY2FsaG9zdC5kaXJlY3QKcmN0ZlVybDogaHR0cHM6Ly9jdGYudGpjdGYub3JnCnRyYWVmaWs6CiAgaHR0cEVudHJ5cG9pbnQ6IHdlYnNlY3VyZQogIHRjcEVudHJ5cG9pbnQ6IHRjcAogIHRjcFBvcnQ6IDEzMzcKaW5ncmVzczoKICBuYW1lc3BhY2VTZWxlY3RvcjoKICAgIG1hdGNoTGFiZWxzOgogICAgICBrdWJlcm5ldGVzLmlvL21ldGFkYXRhLm5hbWU6IHRyYWVmaWsKICBwb2RTZWxlY3RvcjoKICAgIG1hdGNoTGFiZWxzOgogICAgICBhcHAua3ViZXJuZXRlcy5pby9uYW1lOiB0cmFlZmlrCnNlY3JldEtleTogInJhbmRvbWx5IGdlbmVyYXRlZCBzZWNyZXQga2V5IgpyZWNhcHRjaGE6CiAgc2l0ZUtleTogNkxlSXhBY1RBQUFBQUpjWlZScXlIaDcxVU1JRUdOUV9NWGppWktoSQogIHNlY3JldEtleTogNkxlSXhBY1RBQUFBQUdHLXZGSTFUblJXeE1aTkZ1b2pKNFdpZkpXZQo=
+  config.yaml: Y2hhbGxlbmdlRG9tYWluOiBsb2NhbGhvc3QuZGlyZWN0Cmt1YmVDb25maWc6IGNsdXN0ZXIKcHVibGljVXJsOiBodHRwczovL2tsb2RkLmxvY2FsaG9zdC5kaXJlY3QKcmN0ZlVybDogaHR0cHM6Ly9iMDFsZXJzYy50Zgp0cmFlZmlrOiAKICBodHRwRW50cnlwb2ludDogd2Vic2VjdXJlCiAgdGNwRW50cnlwb2ludDogdGNwCiAgdGNwUG9ydDogMTMzNwppbmdyZXNzOiAKICBuYW1lc3BhY2VTZWxlY3RvcjoKICAgIG1hdGNoTGFiZWxzOgogICAgICBrdWJlcm5ldGVzLmlvL21ldGFkYXRhLm5hbWU6IGRlZmF1bHQgI2Vuc3VyZSB0aGlzIG1hdGNoZXMgdGhlIG5hbWVzcGFjZSB0cmFlZmlrIGlzIG9uLgogIHBvZFNlbGVjdG9yOgogICAgbWF0Y2hMYWJlbHM6CiAgICAgIGFwcC5rdWJlcm5ldGVzLmlvL25hbWU6IHRyYWVmaWsKc2VjcmV0S2V5OiAicmFuZG9tbHkgZ2VuZXJhdGVkIHNlY3JldCBrZXkiCnJlY2FwdGNoYToKICBzaXRlS2V5OiA2TGVJeEFjVEFBQUFBSmNaVlJxeUhoNzFVTUlFR05RX01YamlaS2hJCiAgc2VjcmV0S2V5OiA2TGVJeEFjVEFBQUFBR0ctdkZJMVRuUld4TVpORnVvako0V2lmSldl
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -159,7 +159,7 @@ metadata:
   namespace: klodd
 spec:
   rules:
-    - host: klodd.localhost.direct
+    - host: klodd.localhost.direct #change this eventually to your public domain
       http:
         paths:
           - backend:
@@ -176,7 +176,7 @@ View the example base64 decoded `config.yaml` below:
 ```yaml
 challengeDomain: localhost.direct # use localhost.direct for local testing, or your domain for production
 kubeConfig: cluster
-publicUrl: https://klodd.localhost.direct
+publicUrl: https://klodd.localhost.direct # eventually change this to your domain
 rctfUrl: https://b01lersc.tf # Your rCTF URL here.
 traefik: 
   httpEntrypoint: websecure
