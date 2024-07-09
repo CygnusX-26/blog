@@ -2,7 +2,7 @@ title: Neil's Blog
 description: A simple blog for ctf writeups and tutorials.
 theme: just-the-docs
 enable_copy_code_button: true
-color_scheme: light
+color_scheme: dark
 gems:
   - jekyll-seo-tag
 
