@@ -6,7 +6,7 @@ nav_order: 3
 grand_parent: Writeups
 ---
 
-## msFrogOfWar3 DUCTF2024
+## msFrogOfWar3 corctf2024
 458 points - 3 solves - First Blood!
 
 **Author**: strellic, quintec
