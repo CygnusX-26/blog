@@ -7,7 +7,7 @@ grand_parent: Writeups
 ---
 
 ## msFrogOfWar3 corctf2024
-458 points - 3 solves - First Blood!
+431 points - 4 solves - First Blood!
 
 **Author**: strellic, quintec
 
@@ -356,4 +356,4 @@ corctf{"Whatever you do, don't reveal all your techniques in a CTF challenge, yo
 
 ### Summary
 
-Overall this challenge only got three solves making it one of the harder..? challenges, and definitely one of the most unique. We got first blo
+Overall this challenge only got four solves making it one of the harder..? challenges, and definitely one of the most unique. We got first blood after over 24 hours!
