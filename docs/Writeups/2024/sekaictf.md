@@ -106,7 +106,7 @@ My first thought now, is to try and find some other file that might contain a pr
 
 I was curious about where the kernel stores the environment variables of a process, and took a deep dive into the c `getenv` function. Ultimately this ended up being a dead end.
 
-I also wrote a small scrit to search every single file on the file system for the word `SEKAI{` and found nothing.
+I also wrote a small script to search every single file on the file system for the word `SEKAI{` and found nothing.
 
 After being stuck at this step for a while, a teammate of mine came up with the idea that there could be a race condition with `os.stat` and symlinks.
 
