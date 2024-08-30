@@ -6,7 +6,7 @@ nav_order: 1
 
 # About me
 
-Current *sophomore* at Purdue, and Treasurer of the b01lers CTF team.
+Current *junior* at Purdue, and Treasurer of the b01lers CTF team.
 
 My journey in CTFs began in 2022 when I joined the [b01lers](https://b01lersc.tf/) CTF team. I have since then been learning and competing in CTFs, and have been enjoying the experience.
 
