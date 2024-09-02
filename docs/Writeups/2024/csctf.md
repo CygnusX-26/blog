@@ -2,7 +2,7 @@
 title: cygnusx - csctf2024
 layout: default
 parent: 2024
-nav_order: 3
+nav_order: 4
 grand_parent: Writeups
 ---
 
