@@ -2,6 +2,7 @@ version: "3.7"
 services:
     blog:
         container_name: blog
+        restart: always
         build:
             dockerfile: Dockerfile
             context: .
