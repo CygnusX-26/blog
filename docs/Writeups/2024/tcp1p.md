@@ -6,7 +6,7 @@ nav_order: 5
 grand_parent: Writeups
 ---
 
-## swimming to escape csctf2024
+##  Inju's Gambit
 144 points - 16 solves
 
 **Author**: Kiinzu
