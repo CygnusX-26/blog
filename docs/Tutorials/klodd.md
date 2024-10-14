@@ -22,7 +22,9 @@ You are responsible for properly configuring a wildcard DNS record to point thes
 
 Just a side note, Klodd Auth can be configured through rCTF. View more information about this here: [Klodd Auth](https://klodd.tjcsec.club/install-guide/prerequisites/). I would reccomend using rCTF auth, as it worked seamlessly for me.
 
-**Note:** Kevin explain how you did this here...
+> To set up the rCTF OAuth required by Klodd, you'll need to configure a `/auth` route that redirects incoming requests to the Klodd auth endpoint and injects the users rCTF token [as described by their docs here](https://klodd.tjcsec.club/install-guide/prerequisites/#rctf).
+> 
+> There's no reason to require a Cloudflare worker though; on our custom frontend, we implemented this with a [Next.js route handler with similar logic](https://github.com/ky28059/bctf/blob/main/app/auth/route.ts).
 
 ## Installation
 
