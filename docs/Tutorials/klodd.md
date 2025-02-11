@@ -132,7 +132,7 @@ spec:
             secretName: klodd
       containers:
         - name: klodd
-          image: ghcr.io/tjcsec/klodd:master # 
+          image: ghcr.io/tjcsec/klodd:c1c0d7f3c96aa011c23f539f43d19aa5039440ac # You can change this to the latest commit hash
           volumeMounts:
             - name: config
               mountPath: /app/config/
@@ -316,3 +316,45 @@ If you see "unknown" as the status of your challenge, there is probably a port c
 ### Debugging
 
 You can view the traefik container's logs to see specific errors, or to find the namespace of the problematic pod.
+
+### Klodd user missing permissions
+When starting an instance if you see `failed to create middleware` or `failed to create ingress`, this means that you do not have klodd roles and role bindings setup properly.
+
+Copy the following two files
+
+clusterrole.yaml
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: traefik-manager
+rules:
+  - apiGroups: ["traefik.containo.us"]
+    resources: ["middlewares", "ingressroutes"]
+    verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+  - apiGroups: [""]
+    resources: ["ingresses"]
+    verbs: ["create", "get", "list", "watch", "update", "patch", "delete"]
+```
+clusterbinding.yaml
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: klodd-traefik-manager-binding
+subjects:
+  - kind: ServiceAccount
+    name: klodd
+    namespace: klodd  # Make sure this matches your ServiceAccount namespace
+roleRef:
+  kind: ClusterRole
+  name: traefik-manager
+  apiGroup: rbac.authorization.k8s.io
+```
+
+And apply these files with 
+
+```sh
+kubectl apply -f clusterrole.yaml
+kubectl apply -f clusterbinding.yaml
+```
